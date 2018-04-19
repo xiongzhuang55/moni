@@ -2,12 +2,13 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
 import router from './router'
 import API from '../config/httpUrl'
 import {fetch, post} from './axios'
 import 'lib-flexible'
-import iView from 'iview'
-import 'iview/dist/styles/iview.css'
+
 
 
 Vue.use(iView);

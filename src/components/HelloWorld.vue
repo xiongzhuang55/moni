@@ -62,7 +62,7 @@
         </Col>
       </Row>
       <Row :gutter="16" class="tizheng border1 width550" style="margin:0 auto">
-        <Col span="5">
+        <Col span="6">
           <Input v-model="formLeft.tw" @on-change="regDataFn(formLeft.tw,regData.regTw.reg,regData.regTw.minNumber,regData.regTw.maxNumber,regData.regTw.errorInfo)">
             <span slot="prepend">体温</span>
             <span slot="append">°C</span>
@@ -126,13 +126,14 @@
 
 <script>
   import Result from './result.vue'
+  const documentHeight = document.documentElement.clientHeight - 120 + 'px';
 export default {
   name: 'HelloWorld',
   components:{"v-result":Result},
   data () {
     return {
-      height: '',
-      sliderHiehgt: '',
+      height: documentHeight,
+      sliderHiehgt: documentHeight,
       slideShow: false,
       formLeft: {
         name: '',
@@ -141,7 +142,7 @@ export default {
           number: '',
           type: '岁'
         },
-        zhusu: '',
+        zs: '',
         xbs: '',
         tj: '',
         fzjc: '',
@@ -202,8 +203,7 @@ export default {
     }
   },
   created() {
-    this.height = document.documentElement.clientHeight - 120 + 'px';
-    this.sliderHiehgt = document.documentElement.clientHeight - 120 + 'px';
+
   },
   methods: {
     regDataFn (_data, _reg, _minNumber, _maxNumber, _errorInfo) {

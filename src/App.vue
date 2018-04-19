@@ -62,7 +62,6 @@ export default {
   },
   created() {
     this.height = document.documentElement.clientHeight - 100 + 'px'
-    console.log(this.height)
   }
 }
 </script>
